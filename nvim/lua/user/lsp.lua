@@ -1,4 +1,14 @@
 local lsp_zero = require('lsp-zero')
+local cmp = require('cmp')
+
+cmp.setup {
+  mapping = {
+    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    -- Add other mappings as needed
+  },
+  -- Other configuration options...
+}
 
 lsp_zero.on_attach(function(_, bufnr)
     print("help")
